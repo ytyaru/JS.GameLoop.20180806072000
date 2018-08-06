@@ -32,7 +32,7 @@ define(function() {
     }
     C.Initialize = function() {
         C._intervalId = window.setInterval(C._Loop(), 0);
-        window.onunload = function(e) { window.clearInterval(C._intervalId); alert("clearInterval実行！"); }
+        window.onbeforeunload = function(e) { window.clearInterval(C._intervalId); alert("clearInterval実行！"); return "cancelAnimationFrame実行！"; }
     }
     return C;
 })();

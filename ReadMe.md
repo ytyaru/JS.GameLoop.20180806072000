@@ -6,6 +6,10 @@ JavaScriptでゲームループを作る。FPS計測。[demo](https://ytyaru.git
 
 * [demo](https://ytyaru.github.io/JS.GameLoop.20180806072000)
 
+# イベント解放処理
+
+タブ閉じ、F5キー更新で終了確認ダイアログが表示される。終了せず留まるとFPSアニメーションが停止する。これは`requestAnimationFrame`をキャンセルする`cancelAnimationFrame`関数によるものである。また、`setInterval`なら`clearInterval`が実行され同じく停止する。
+
 # 課題
 
 FPS制御がまったくできていない。
